@@ -1,6 +1,6 @@
 require 'rubygems'
 
-spec = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.name = "Saikuro"
   s.version = "1.1.1"
   s.author = "Zev Blut"
@@ -18,14 +18,6 @@ spec = Gem::Specification.new do |s|
     item.include?(".svn") || item.include?("rdoc")
   end
   s.executables = ['saikuro']
-  s.has_rdoc = true
+  #s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
 end
-
-
-
-if __FILE__ == $0
-  Gem::manage_gems
-  Gem::Builder.new(spec).build
-end
-
